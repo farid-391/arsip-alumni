@@ -1,0 +1,203 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 3rem;
+  --nav-width: 70px;
+
+  /*===== Colors =====*/
+  --first-color: #203C58;
+  --first-color-light: #AFA5D9;
+  --white-color: #F7F6FB;
+  --yellow-color:#FFCA2C;
+  --light-blue-color:#518CEC;
+  --very-light-blue-color: #E0EAFC;
+  --black-color: #333333;
+  --light-black-color: #495057;
+  --white: #ffffff;
+  
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif; 
+  --normal-font-size: .9rem;
+  
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+.navbar{
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.icon__size-2{
+  font-size: 1.2rem;
+  padding-right: .2rem;
+}
+.card__body-icon{
+  position: absolute;
+  width: 8rem;
+  right: 8px;
+  top: 5px;
+  bottom: 3px;
+  opacity: .8;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  background-color:#f8f9fa;
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 2 2rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+} 
+
+a, a:hover{
+  text-decoration: none;
+}
+
+.underline-link, .underline-link:hover{
+  text-decoration: underline;
+  color: var(--blue);
+}
+.bg__first-color{
+  background: var(--first-color);
+}
+
+.text__blue-color{
+  color: var(--first-color);
+}
+
+/* Button Style */
+.btn__icon-first, .btn__icon-first:hover{
+  vertical-align: middle;
+  text-align: center;
+  background: var(--first-color);
+  color: var(--white-color);
+}
+
+.btn__icon-blue, .btn__icon-blue:hover{
+  vertical-align: middle;
+  text-align: center;
+  background: var(--light-blue-color);
+  color: black;
+}
+
+.btn__icon-white{
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid var(--white);
+  background: var(--first-color);
+}
+
+.btn__icon-green, .btn__icon-green:hover{
+  vertical-align: middle;
+  text-align: center;
+  background: #38c172;
+  color: var(--white-color);
+}
+.btn__icon-red, .btn__icon-red:hover{
+  vertical-align: middle;
+  text-align: center;
+  background: #e3342f;
+  color: var(--white-color);
+}
+.btn__icon-yellow, .btn__icon-red:hover{
+  vertical-align: middle;
+  text-align: center;
+  background: #E0DE1F;
+  color: black;
+}
+
+/* Login Style */
+.login__logo{
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+.login_form{
+  background: white;
+  margin-top: 100px;
+  padding: 0px;
+}
+
+.bg__login-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: var(--z-fixed);
+}
+.btn-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrap-form {
+  padding-top: 40px;
+}
+
+/*===== NAV =====*/
+
+.navbar-nav .nav-item{
+    margin-right: 1.1rem;
+}
+.navbar-nav .nav-item .nav-link, .navbar-nav .nav-item .nav-link:hover{
+    color: rgba(255, 255, 255, 0.651);
+}
+.navbar-nav .nav-item .active, .navbar-nav .nav-item .active:hover{
+    color: white;
+    /* font-weight: bold; */
+    padding-right: .8rem;
+    padding-left: .8rem;
+    border-bottom: .2rem solid var(--white);
+}
+
+.nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  padding: .2rem 0 .2rem 1.2rem;
+}
+
+.nav__logo-icon{
+  width: 4rem;
+  height: 4rem;
+  color: var(--yellow-color);
+}
+
+
+
+.nav__logo-name{
+  font-size: 1.2rem;
+  display: grid;
+  font-weight: bolder;
+  display: table-column;
+}
+/* Footer */
+
+/* ===== MEDIA QUERIES===== */
+@media screen and (min-width: 768px){
+  body{
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+  .bd_column{
+    margin: calc(var(--header-height + 4rem));
+  }
+  
+}
+
+
+
