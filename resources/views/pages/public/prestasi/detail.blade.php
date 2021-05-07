@@ -72,14 +72,38 @@
                             <td class="text-left">Piagam / Sertifikat</td>
                         </tr>
                         <tr>
-                            <td class="align-center"><img src="{{$posts -> link_piagam}}" alt="" width="200" height="200"></td>
+                            <td class="align-center">
+                                <a href="#charterPhotoModal" data-toggle="modal">
+                                {{-- <img src="{{$posts -> link_piagam}}" alt="" width="200" height="200"> --}}
+                                <img src="{{asset('/img/temp/piagam.jpg')}}" alt="" width="200" height="200">
+                                </a>
+                            {{-- Modal Piagam--}}
+                                <div class="modal fade" id="charterPhotoModal" tabindex="-1" aria-labelledby="charterPhotoModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Piagam {{$posts -> nama_acara}}</h5>
+                                        <a class="btn pt-0" data-dismiss="modal" aria-label="Close"><i class='bx bx-x bx-sm'></i></a>
+                                        </div>
+                                        <div class="modal-body">
+                                            {{-- <img src="{{$posts -> link_piagam}}" alt="Photo" width="100%" height="100%"> --}}
+                                            <img src="{{asset('/img/temp/piagam.jpg')}}" alt="Photo" width="100%" height="100%">
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="text-left">Dokumentasi</td>
                         </tr>
                         <tr>
                             <td class="align-center">
-                                @foreach ($docsURL as $url)<img src="{{$url}}" alt="" width="200" height="200" class="pr-2">@endforeach</td>
+                                {{-- @foreach ($docsURL as $url)<a href="{{$url}}"><img src="{{$url}}" alt="" width="200" height="200" class="pr-2">@endforeach</td></a> --}}
+                                <a href="{{asset('/img/temp/dokumentasi1.jfif')}}" target="blank"><img src="{{asset('/img/temp/dokumentasi1.jfif')}}" alt="" width="250" height="200" class="pr-2 pt-2"></a>
+                                <a href="{{asset('/img/temp/dokumentasi2.jfif')}}" target="blank"><img src="{{asset('/img/temp/dokumentasi2.jfif')}}" alt="" width="250" height="200" class="pr-2 pt-2"></a>
                         </tr>
                     </table>
                 </div>

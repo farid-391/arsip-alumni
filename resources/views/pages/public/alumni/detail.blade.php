@@ -21,7 +21,26 @@
             <div class="card-body">
                 <td class="align-center">                    
                     <div class="d-flex flex-column">
-                        <img src="{{$student -> data -> foto_siswa}}" alt="Photo" width="200" height="200">
+                        <a href="#pasPhotoModal" data-toggle="modal">
+                            <img src="{{asset('/img/avatar-default.png')}}" alt="Photo" width="200" height="200">
+                            {{-- <img src="{{$student -> data -> foto_siswa}}" alt="Photo" width="200" height="240"> --}}
+                        </a>
+                    </div>
+                    {{-- Modal Foto --}}
+                    <div class="modal fade" id="pasPhotoModal" tabindex="-1" aria-labelledby="pasPhotoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Foto {{$student -> data -> nama_lengkap}}</h5>
+                              <a class="btn pt-0" data-dismiss="modal" aria-label="Close"><i class='bx bx-x bx-sm'></i></a>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{asset('/img/avatar-default.png')}}" alt="Photo" width="100%" height="100%">
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </td>
             </div>

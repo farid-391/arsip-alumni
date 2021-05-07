@@ -1,8 +1,8 @@
 @extends('layouts.auth')
 @section('title', 'Masuk')
 @section('content')
-<center>
-    <div class="card col-sm-10 col-md-8 col-xl-4 align-self-center px-0" style="border-radius:8px;">
+<div class="container d-flex justify-content-center">
+    <div class="card col col-sm-10 col-md-8 col-xl-4 px-0 " style="border-radius:8px;">
         <form action="/beranda" method="POST">
             @csrf
         <div class="card-header radius-10 bg__first-color px-0" style="border-radius: 8px 8px 0px 0px;">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-</center>
+</div>
 {{-- 
 
     <div class="row-cols-1 wrap-form">

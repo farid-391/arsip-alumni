@@ -36,7 +36,7 @@ class AuthController extends Controller
         $token = $response->access_token;
         $posts = json_decode(Http::get("https://shielded-headland-74924.herokuapp.com/api/jumlah/siswa"));
         $posts2 = json_decode(Http::get("https://shielded-headland-74924.herokuapp.com/api/jumlah/prestasi"));
-       
+        // dd($response);
         return view('pages.admin.index', compact('token', 'posts', 'posts2'));
 
     }

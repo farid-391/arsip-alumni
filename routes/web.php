@@ -21,10 +21,11 @@ Route::get('/lihat/alumni/{slug}', 'PublicController@detailAlumni');
 Route::get('/lihat/prestasi/{slug}', 'PublicController@detailPrestasi');
 Route::get('/prestasi/{slug}', 'GetController@detailPrestasi');
 
+
+Route::post('/beranda', 'AuthController@login'); //Login 
 Route::get('/beranda', function () {
     return view('pages/admin/index'); //dashboard page
 });
-Route::post('/beranda', 'AuthController@login'); //Login 
 Route::get('/masuk', function () {
     return view('pages/auth/signin');
 });
