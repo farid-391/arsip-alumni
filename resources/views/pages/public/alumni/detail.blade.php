@@ -1,5 +1,5 @@
 @extends('layouts.public')
-@section('title', 'Alumni')
+@section('title', 'Detail Alumni')
 @section('nav-status-1', '')
 @section('nav-status-2', '')
 @section('nav-status-3', 'active')
